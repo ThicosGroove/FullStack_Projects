@@ -13,19 +13,19 @@
 
     <form action="/registration">
 
-        <div class="nameRegister">
-            <p>
+        <div class="register">
+
+            <div>
                 <label for="firstName">Enter First Name: </label>
                 <input type="text" id="firstName" placeholder="First Name" name="firstName" required>
-            </p>
-            <p>
+            </div>
+
+            <div>
                 <label for="lastName">Enter Last Name: </label>
                 <input type="text" id="lastName" placeholder="Last Name" name="lastName" required>
-            </p>
-        </div>
+            </div>
 
-        <div>
-            <p>
+            <div>
                 <label for="age-select">Select age group</label>
                 <Select class="ageSelect" name="age" id="age-select" required>
                     <option value="">--Please Choose an option</option>
@@ -35,35 +35,33 @@
                     <option value="between_35-55">Between 35-55</option>
                     <option value="above-55">Above 55</option>
                 </Select>
-            </p>
-        </div>
+            </div>
 
-        <div class="emailPasswordRegister">
-            <p>
+            <div>
                 <label for="email">Enter Email: </label>
                 <input type="email" id="email" placeholder="Email" name="email" required>
-            </p>
-            <p>
+            </div>
+
+            <div>
                 <label for="password">Enter Password: </label>
                 <input type="password" id="password" placeholder="Password" name="Password" required>
-            </p>
+            </div>
+
         </div>
 
         <h2 id="selectRace">Select a Race!</h2>
-        <div>
-            <p>
-                <!--Radio é uma escolha. Precisa do valor pra saber qual foi escolhido-->
-                <label for="fun5k">Fun Race 5k</label>
-                <input type="radio" name="marathon" id="fun5k" value="fun5k" required><br>
-                <label for="half-marathon">Half Marathon</label>
-                <input type="radio" name="marathon" id="half-marathon" value="half-marathon"><br>
-                <label for="full-marathon">full Marathon</label>
-                <input type="radio" name="marathon" id="full-marathon" value="full-marathon"><br>
-            </p>
+        <div class="raceType">
+            <!--Radio é uma escolha. Precisa do valor pra saber qual foi escolhido-->
+            <label for="fun5k">Fun Race 5k</label>
+            <input type="radio" name="marathon" id="fun5k" value="fun5k" required><br>
+            <label for="half-marathon">Half Marathon</label>
+            <input type="radio" name="marathon" id="half-marathon" value="half-marathon"><br>
+            <label for="full-marathon">full Marathon</label>
+            <input type="radio" name="marathon" id="full-marathon" value="full-marathon"><br>
         </div>
 
         <div>
-            <button id="register">Registration!</button>
+            <button id="registerButton">Registration!</button>
         </div>
     </form>
 </body>
