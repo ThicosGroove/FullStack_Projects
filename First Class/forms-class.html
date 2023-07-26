@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Class</title>
+</head>
+
+<!-- Checar MDN web Doc para os tipos de Inputs -->
+
+<body>
+    <h1>Form Class</h1>
+    <nav>
+        <ul>
+            <il><a href="first-class.html">Back To First Class</a></il>
+            <il><a href="table-class.html">Table Class</a></il>
+            <br>
+            <il><a href="real-form-exemple.html">Real Registration Form Exemple</a></il>
+            <il><a href="transition-class.html">Transition Exemple</a></il>
+            <il><a href="photo-blog-exemplo.html">Photo Blog Exemple</a></il>
+            <il><a href="flex-box-class.html">Flex Box Exemple</a></il>
+        </ul>
+    </nav>
+
+    <form action="/tacos">
+        <p>
+            <label for="username">Enter Username:</label>
+            <input id="username" type="text" placeholder="Username" name="username">
+        </p>
+
+        <p>
+            <label for="password">Enter Password:</label>
+            <input id="password" type="password" placeholder="Password" name="password">
+        </p>
+        <p>
+            <label for="formCheckbox">Você é o amor da minha vida?</label>
+            <input id="formCheckbox" type="checkbox" name="checkbox">
+        </p>
+        <p>
+            <label for="weddingDate">Data do nosso casamento</label>
+            <input id="weddingDate" type="date" name="weddingDate">
+        </p>
+        <p>
+            <label for="dressColor">Cor do Vestido</label>
+            <input id="dressColor" type="color" name="color">
+        </p>
+        <p>
+            <label for="bestButtonPattern">Aceita esse pedido?</label>
+            <button id="bestButtonPattern">Confirmado!</button>
+            <!-- Botões dentro do form são de tipo "submit" por default-->
+            <button type="button">Esse Botão não funciona</button>
+            <!-- Esse botão com tipo "button" não tem função sem o Js -->
+        </p>
+        <p>
+            <label for="inputSubmit">Input Submit Funciona</label>
+            <input id="inputSubmit" type="submit" value="Mas não é uma boa prática">
+            <!-- Input type "submit" tem a mesma função que button type "sumbit" -->
+            <!-- Mas não é uma boa prática-->
+        </p>
+
+        <!-- Outros tipos
+             <input type="search" placeholder="Search">
+        <input type="range"> -->
+    </form>
+
+    <hr>
+    <!-- Fora do form o botão não tem função defalut-->
+    <label for="buttonOutsideForm">Também não funciona</label>
+    <button id="buttonOutsideForm">Botão sem tipo fora do form</button>
+    <hr>
+
+    <h2>Roubando as pesquisas</h2>
+    <!--Inputs não precisam do botão, a tecla enter cumpre a função.-->
+    <!--Mas parece sempre melhor ter um botão-->
+    <p>
+    <h3>Use o Google</h3>
+    <form action="https://www.google.com/search">
+        <label for="Input Google Search"></label>
+        <input type="text" id="Input Google Search" name="q" placeholder="Google">
+        <button>Pesquise no Google</button>
+    </form>
+    </p>
+
+    <p>
+    <h3>Use o Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <label for="Input Youtube Search"></label>
+        <input type="text" id="Input Youtube Search" name="search_query" placeholder="Youtube">
+        <button>Pesquise no Youtube</button>
+    </form>
+    </p>
+
+    <hr>
+    <h2>More Inputs!</h2>
+    <form action="/noRealFunctionYet">
+        <p>
+            <!--Checkbox é um booleano.-->
+            <label for="agree_terms"> I Agree to Everything</label>
+            <input type="checkbox" name="agree_terms" id="agree_terms">
+        </p>
+        <p>
+            <!--Radio é uma escolha. Precisa do valor pra saber qual foi escolhido-->
+            <label for="size_1">Size 1</label>
+            <input type="radio" name="size" id="size_1" value="size_1"><br>
+            <label for="size_2">Size 2</label>
+            <input type="radio" name="size" id="size_2" value="size_2"><br>
+            <label for="size_3">Size 3</label>
+            <input type="radio" name="size" id="size_3" value="size_3"><br>
+        </p>
+        <p>
+            <label for="pet-select">Choose a pet:</label>
+            <select name="pets" id="pet-select">
+                <option value="">--Please choose an option</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="snake">Snake</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="range">Level of tranquility</label>
+            <input type="range" name="range" id="range" min="0" max="100" value="50">
+        </p>
+
+        <p>
+            <label for="textArea">Text Area</label>
+            <br>
+            <textarea name="textArea" id="textArea" placeholder="Type Text Here!" cols="30" rows="5"></textarea>
+        </p>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern -->
+        <h2>Validations Demo</h2>
+        <form action="/validation">
+            <p>
+                <label for="firstName">Enter First Name</label>
+                <input type="text" name="lastName" id="firstName" placeholder="Enter Name" required>
+            </p>
+            <p>
+                <label for="username">Enter Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Username" minlength="4"
+                    maxlength="8" required>
+            </p>
+            <button>Envia Formulário</button>
+        </form>
+    </form>
+</body>
+
+</html>

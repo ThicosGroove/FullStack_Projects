@@ -1,0 +1,153 @@
+h1 {
+    text-align: center;
+}
+
+.container:first-of-type {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container div {
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+}
+
+#show-flex {
+    width: 500px;
+    height: 200px;
+    align-self: flex-start;
+}
+
+.container div:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.container2 {
+    background-color: #702343;
+    width: 90%;
+    height: 90%;
+    margin: 2px auto;
+    border: 5px solid #702343;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.container2 div {
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+}
+
+#show-flex-wrap {
+    width: 700px;
+    height: 100px;
+}
+
+#show-flex-wrap2 {
+    width: 100px;
+    height: 50px;
+}
+
+.container3 {
+    background-color: #3a5f52;
+    width: 90%;
+    height: 90%;
+    margin: 2px auto;
+    border: 5px solid #3a5f52;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.container3 div {
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+}
+
+#show-align-item {
+    width: 200px;
+    height: 100px;
+}
+
+#show-align-item2 {
+    width: 100px;
+    height: 50px;
+}
+
+#show-align-item3 {
+    width: 300px;
+    height: 50px;
+}
+
+#show-align-item4 {
+    width: 50px;
+    height: 100px;
+}
+
+#show-align-item5 {
+    width: 100px;
+    height: 200px;
+}
+
+.container4 {
+    background-color: #515151;
+    width: 90%;
+    height: 90%;
+    margin: 2px auto;
+    border: 5px solid #515151;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* Cria novo espaço automaticaente ou não*/
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.container4 div {
+    width: 200px;
+    height: 200px;
+    /* max-width: 400px; */
+    margin: 2px;
+    flex-basis: 200px;
+    /* flex-grow: 1; */
+}
+
+.container4 div:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.container4 div:nth-of-type(5) {
+    flex-grow: 3;
+}
+
+.container5 {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.container5 .sidebar {
+    background-color: #7209b7;
+    flex: 1 1 300px;
+}
+
+.container5 .maincontent {
+    background-color: #f72585;
+    flex: 2 0 200px;
+}

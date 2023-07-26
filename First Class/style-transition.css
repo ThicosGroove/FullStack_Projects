@@ -1,0 +1,119 @@
+/* Transition pode ter vários parametros:
+    apenas o tempo de duração, ou o tempo de duração + delay.
+    um parametro específico tipo color + tempo.
+    E formas de fazer a transição ease-in.
+*/
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #003049;
+
+    width: 60%;
+    margin: auto;
+
+}
+
+button {
+    font-weight: 100;
+    background-color: #003049;
+    color: #fcbf49;
+    padding: 1em 1.5em;
+    border: #fcbf49 solid;
+    transition: 0.25s;
+}
+
+button:hover {
+    border-color: #fcf949;
+    color: #fcf949;
+    box-shadow: 0 0.5em 0.5em -0.4em #fcf949;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    transition: 1s;
+    /* transition: background-color 1s ease-in, border-radius 2s; */
+}
+
+.circle:hover {
+    background-color: brown;
+    border-radius: 50%;
+}
+
+section:first-of-type div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:first-of-type:hover div {
+    margin-left: 500px;
+}
+
+section div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+section div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+section div:nth-of-type(3) {
+    transition-timing-function: ease-in-out;
+}
+
+section div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+h1 {
+    display: inline-block;
+    padding: 2px;
+    border-right: 30px;
+    border-width: thick;
+    border: 5px solid #003049;
+    transition: 1s;
+}
+
+h1:nth-of-type(1) {
+    background-color: #eae2b7;
+}
+
+h1:nth-of-type(2) {
+    background-color: #fcbf49;
+}
+
+h1:nth-of-type(3) {
+    background-color: #f77f00;
+}
+
+h1:nth-of-type(4) {
+    background-color: #d62828;
+}
+
+section:nth-of-type(2) h1:nth-of-type(1):hover {
+    transform: rotate(360deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(2):hover {
+    transform: translate(20px, 15px);
+}
+
+section:nth-of-type(2) h1:nth-of-type(3):hover {
+    transform: scale(1.5);
+}
+
+section:nth-of-type(2) h1:nth-of-type(4):hover {
+    transform: skew(-60deg) scale(2);
+}
+
+
+.link {
+    color: #f77f00;
+}
