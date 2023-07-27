@@ -7,13 +7,21 @@ body {
     background-color: #e9c46a;
 }
 
+h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: #e76f51 underline wavy;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
+    color: #2a9d8f;
+}
+
 form {
     box-sizing: border-box;
     box-shadow: #ef210e;
     width: 500px;
-    /* border-width: 10px;
-    border-style: solid;
-    border-color: #efa40e; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +33,7 @@ form {
     margin: auto;
 }
 
-.register {
+.container {
     display: flex;
     justify-content: end;
     flex-direction: column;
@@ -33,14 +41,18 @@ form {
     margin-top: 25px;
 }
 
-.register div {
+.container div {
     width: 100%;
     margin: 10px 0px;
 }
 
+.register {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
 form div label {
-    display: inline-block;
-    width: 50%;
     text-transform: capitalize;
     text-align: start;
     font-weight: bold;
@@ -48,19 +60,78 @@ form div label {
     color: #264653;
 }
 
-.register div input {
-    align-items: end;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    color: #706e6e;
     background-color: #efa40e;
+    padding: 2px;
+    border-style: solid;
+    border-radius: 10px 100px / 120px;
+    border-width: 2px;
+    border-color: #2a9d8f;
 }
 
 .raceType {
-    display: inline-block;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-bottom: 25px;
+    flex-wrap: nowrap;
 }
 
-.raceType label {
-    width: 80%;
+.race {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    color: #2a9d8f;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-decoration: #e76f51 underline wavy;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
+}
+
+
+div .registerButton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-style: hidden;
+    border-radius: 10px 100px / 120px;
+    font-size: 40px;
+    color: #264653;
+    background-color: #e76f51;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #2a9d8f;
+    color: #e9c46a;
+}
+
+
+hr {
+    border-style: solid;
+    display: grid;
+    border-width: 50px;
+    border-top-width: 20px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-radius: 3px;
+    border-top-color: #2a9d8f;
+    border-bottom-color: #e76f51;
 }
 
 .link {
@@ -75,111 +146,4 @@ form div label {
 
 .link:hover {
     text-decoration-style: wavy;
-}
-
-h1 {
-    text-transform: capitalize;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: #e76f51 underline wavy;
-    letter-spacing: 10px;
-    font-size: 50px;
-    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
-    color: #2a9d8f;
-}
-
-h2 {
-    text-transform: capitalize;
-    text-align: center;
-    font-weight: bold;
-    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
-    color: #264653;
-}
-
-#selectRace {
-    color: #2a9d8f;
-    letter-spacing: 5px;
-    font-size: 30px;
-    font-family: monospace, Tahoma, Geneva, fantasy;
-    text-decoration: #e76f51 underline wavy;
-}
-
-button {
-    border-style: hidden;
-    border-radius: 10px 100px / 120px;
-    font-size: 40px;
-    color: #264653;
-    background-color: #e76f51;
-    text-align: center;
-}
-
-button:hover {
-    background-color: #2a9d8f;
-    color: #e9c46a;
-}
-
-#registerButton {
-    font-weight: bold;
-    font-family: monospace, fantasy, Geneva, Tahoma, sans-serif;
-    align-self: center;
-}
-
-
-
-/* input[type="radio"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
-}
-
-input[type="radio"]:checked::before {
-    transform: scale(1);
-} */
-
-input[type="radio"] {
-    transform: translateX(-0.075em);
-    color: #efa40e;
-    text-align: right;
-}
-
-input[type="radio"] :checked {
-    box-shadow: 0 0 0 3px orange;
-}
-
-select {
-    text-align: center;
-    background-color: #efa40e;
-}
-
-
-a {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a :hover {
-    text-decoration: underline;
-}
-
-
-
-p {
-    align-items: center;
-    text-align: center;
-}
-
-hr {
-    border-style: solid;
-    display: grid;
-    border-width: 50px;
-    border-top-width: 20px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-radius: 3px;
-    border-top-color: #2a9d8f;
-    border-bottom-color: #e76f51;
 }
