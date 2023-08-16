@@ -1,0 +1,15 @@
+pwd => Mostra a pasta atual
+
+ls => lista as pastas e arquivos na pasta atual
+
+cd => change directory
+
+mkdir => make (new) directory 
+
+rmdir => remove (empty) directoy
+
+touch => cria novo arquivo (especificar o tipo do arquivo)
+
+rm => remove arquivo (Remove pra sempre, tomar cuidado)
+
+rm -rf => remove TUDO a partir da pasta específica. Outras pastas e arquivos (Tomar muito cuidado). 
