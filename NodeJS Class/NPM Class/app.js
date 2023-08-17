@@ -1,3 +1,5 @@
+// npm js package
+
 const math = require("./math");
 console.log(math.square(6));
 
