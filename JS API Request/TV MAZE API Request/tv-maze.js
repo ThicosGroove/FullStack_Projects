@@ -21,5 +21,7 @@ const makeImages = (shows) => {
       img.src = result.show.image.medium;
       document.body.append(img);
     }
+    // Else Criar um novo elemento pra mostrar ao usuário
+    // que não encontrou
   }
 };
