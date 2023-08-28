@@ -1,0 +1,30 @@
+MANUAL PARA PRIMEIRAS CONFIGURAÇÕES DO EXPRESS:
+
+TUDO PELO TERMINAL BASH
+- npm init -y               Cria uma série de arquivos que salvam as configurações
+- npm i express             instala express
+- npm i ejs                 instala EJS              
+- touch index.js            principal arquivo de controle das páginas
+- mkdir views               padrão de pasta com os arquivos EJS / HTML 
+- touch views/home.ejs      criação da página principal
+- nodemon index.js          Inicia o sistema (no browser localhost:3000)
+
+
+DENTRO DE INDEX.js:
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.set("view engine", "ejs");
+
+app.listen(port, () => {
+  console.log("LIGOU");
+});
+
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
+app.get("/forum", (req, res) => {
+  res.render("forum");
+});
